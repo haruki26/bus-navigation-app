@@ -11,3 +11,4 @@ const app = new Hono()
   });
 
 export const handler = handle(app);
+export default app;
