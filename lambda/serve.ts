@@ -1,5 +1,5 @@
 import { serve } from '@hono/node-server';
-import app from './index';
+import app from './routes';
 
 serve({
   port: 3000,
