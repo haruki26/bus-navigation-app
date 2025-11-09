@@ -1,0 +1,3 @@
+[submodule "otp-serve"]
+	path = otp-serve
+	url = https://github.com/haruki26/OpenTripPlanner-ODPT-GTFS-static.git
