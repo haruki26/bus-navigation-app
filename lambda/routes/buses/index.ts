@@ -10,11 +10,11 @@ const route = new Hono()
     const query = c.req.valid('query');
 
     const res = await (async () => {
-      if (query === undefined) {
+        if (query === undefined || Object.keys(query).length === 0) {
         return await getBuses();
       }
 
-      if (query.stopId !== undefined) {
+      if (query.stopId !== undefined && query.stopId !== '') {
         return await getBusesByStopId(query.stopId);
       }
 
