@@ -1,12 +1,8 @@
 import { Hono } from 'hono';
+import busesRoute from './buses'
 
 const app = new Hono()
-  .get('/', (c) => {
-    return c.text('Hello, World!');
-  })
-  .get('/:user', (c) => {
-    const user = c.req.param('user');
-    return c.json({ message: `Hello, ${user}!` });
-  });
+  .basePath('/api')
+  .route('/buses', busesRoute)
 
 export default app;
