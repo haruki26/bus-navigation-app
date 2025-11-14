@@ -3,7 +3,7 @@ import type { Bus } from '../../types';
 
 const query = `query GetBuses {
   routes {
-    gtfsId
+    id: gtfsId
     shortName
     longName
     color

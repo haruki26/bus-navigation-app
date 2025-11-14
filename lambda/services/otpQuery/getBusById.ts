@@ -3,9 +3,9 @@ import { fetchOTP } from "./shared";
 
 const query = `query GtfsExampleQuery ($gtfsId: String!) {
   route (id: $gtfsId) {
+    id: gtfsId
     shortName
     longName
-    gtfsId
     color
     textColor
   }
@@ -15,5 +15,5 @@ interface Response {
     route: Bus;
 }
 
-export const getBusById = async (gtfsId: string) =>
-  (await fetchOTP<Response>(query, { gtfsId })).route
+export const getBusById = async (id: string): Promise<Bus> =>
+  (await fetchOTP<Response>(query, { gtfsId: id })).route

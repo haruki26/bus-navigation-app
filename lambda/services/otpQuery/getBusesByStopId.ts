@@ -4,7 +4,7 @@ import { fetchOTP } from './shared';
 const query = `query getBusesByStopGtfsId($stopId: String!) {
   stop(id: $stopId) {
     routes {
-      gtfsId
+      id: gtfsId
       shortName
       longName
       color

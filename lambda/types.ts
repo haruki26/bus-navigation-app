@@ -1,5 +1,5 @@
 interface Bus {
-  gtfsId: string;
+  id: string;
   shortName: string;
   longName: string;
   color: string;
