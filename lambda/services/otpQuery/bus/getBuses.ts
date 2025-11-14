@@ -1,5 +1,5 @@
-import { fetchOTP } from './shared';
-import type { Bus } from '../../types';
+import { fetchOTP } from './../shared';
+import type { Bus } from '../../../types';
 
 const query = `query GetBuses {
   routes {

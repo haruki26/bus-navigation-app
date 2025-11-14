@@ -1,9 +1,9 @@
 import { Hono } from 'hono';
 import { zValidator } from '@hono/zod-validator';
 import { busQuerySchema } from './schemas';
-import { getBuses } from '../../services/otpQuery/getBuses';
-import { getBusesByStopId } from '../../services/otpQuery/getBusesByStopId';
-import { getBusById } from '../../services/otpQuery/getBusById';
+import { getBuses } from '../../services/otpQuery/bus/getBuses';
+import { getBusesByStopId } from '../../services/otpQuery/bus/getBusesByStopId';
+import { getBusById } from '../../services/otpQuery/bus/getBusById';
 
 const route = new Hono()
   .get('/', zValidator('query', busQuerySchema), async (c) => {

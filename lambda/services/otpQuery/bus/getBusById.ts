@@ -1,5 +1,5 @@
-import { Bus } from "../../types"
-import { fetchOTP } from "./shared";
+import { Bus } from "../../../types"
+import { fetchOTP } from "./../shared";
 
 const query = `query GtfsExampleQuery ($gtfsId: String!) {
   route (id: $gtfsId) {
